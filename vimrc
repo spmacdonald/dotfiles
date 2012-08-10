@@ -218,3 +218,11 @@ let g:syntastic_python_checker_args = '--ignore=E501,W806'
 " Snippets
 imap <F2> import pdb;pdb.set_trace()<CR>
 imap <F3> import code; code.interact(local=locals())<CR>
+
+" Vimux bindings
+map <Leader>rp :VimuxPromptCommand<CR>
+map <Leader>rl :VimuxRunLastCommand<CR>
+map <Leader>ri :VimuxInspectRunner<CR>
+map <Leader>rx :VimuxClosePanes<CR>
+map <Leader>rq :VimuxCloseRunner<CR>
+map <Leader>rs :VimuxInterruptRunner<CR>
