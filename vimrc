@@ -57,7 +57,8 @@ if has('win32') || has('win64')
   " Windows has a nasty habit of launching gVim in the wrong working directory
   cd ~
 elseif has('gui_macvim')
-  set guifont=Menlo\ Regular:h14
+  set guifont=Pragmata\ TT:h14
+  set noantialias
   " Hide Toolbar in MacVim
   if has("gui_running")
     set guicursor=n-v-c:block-Cursor-blinkon0
@@ -90,7 +91,6 @@ set nowritebackup
 " UI
 set fillchars=""
 set laststatus=2  " Always show the statusline
-set mousehide
 set scrolloff=8
 set stl=%f\ %m\ %r\ Line:%l/%L[%p%%]\ Col:%c\ Buf:%n\ [%b][0x%B]
 set showcmd
@@ -137,8 +137,8 @@ set matchtime=2 " How many tenths of a second to blink
 set vb
 
 " Mouse
-set mousehide  " Hide mouse after chars typed
-set mouse=a  " Mouse in all modes
+set mousehide
+set mouse=a
 
 " Better complete options to speed it up
 set complete=.,w,b,u,U
@@ -172,8 +172,8 @@ nmap <silent> <leader>uls :t.\|s/./*/g\|set nohls<cr>
 " Mappings
 nmap <silent> <leader>cd :lcd %:h<CR>
 nmap <silent> <leader>s :set spell!<CR>
-nmap <silent> <leader>v :e ~/.vim/vimrc<CR>
-nmap <silent> <leader>sv :source ~/.vim/vimrc<CR>
+nmap <silent> <leader>v :e $MYVIMRC<CR>
+nmap <silent> <leader>sv :source $MYVIMRC<CR>
 
 " Truncate floats to 6 decimal places
 nmap <silent> <leader>tf :%s/\([-+]\?[1-9]*\.\d\d\d\d\d\d\)[0-9]*/\1/g<CR>
@@ -218,6 +218,3 @@ let g:syntastic_python_checker_args = '--ignore=E501,W806'
 " Snippets
 imap <F2> import pdb;pdb.set_trace()<CR>
 imap <F3> import code; code.interact(local=locals())<CR>
-
-" Powerline
-" let g:Powerline_symbols='fancy'
