@@ -20,6 +20,7 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'benmills/vimux'
 Bundle 'julienr/vimux-pyutils'
+Bundle 'sjl/vitality.vim'
 " Commands
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'tpope/vim-surround'
@@ -184,6 +185,7 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
 " Save when focus is lost
 autocmd FocusLost * :wa
+autocmd FocusGained * :wa
 
 autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 
