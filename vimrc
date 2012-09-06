@@ -58,8 +58,8 @@ if has('win32') || has('win64')
   " Windows has a nasty habit of launching gVim in the wrong working directory
   cd ~
 elseif has('gui_macvim')
-  set guifont=Pragmata\ TT:h14
-  set noantialias
+  set guifont=PragmataPro:h14
+  set antialias
   " Hide Toolbar in MacVim
   if has("gui_running")
     set guicursor=n-v-c:block-Cursor-blinkon0
@@ -80,10 +80,6 @@ elseif has('gui_macvim')
 
   endif
 endif
-
-" Color
-set background=dark
-colorscheme jellybeans
 
 " Backups
 set nobackup
@@ -223,7 +219,8 @@ imap <F3> import code; code.interact(local=locals())<CR>
 
 " Vimux bindings
 map <Leader>rp :VimuxPromptCommand<CR>
-map <Leader>rl :VimuxRunLastCommand<CR>
+" map <Leader>rl :VimuxRunLastCommand<CR>
+map <F5> :wa<CR> <bar> :VimuxRunLastCommand<CR>
 map <Leader>ri :VimuxInspectRunner<CR>
 map <Leader>rx :VimuxClosePanes<CR>
 map <Leader>rq :VimuxCloseRunner<CR>
