@@ -11,9 +11,9 @@ Bundle 'gmarik/vundle'
 
 " Navigation
 Bundle 'kien/ctrlp.vim'
+Bundle 'Lokaltog/vim-easymotion.git'
 " UI Additions
 Bundle 'mutewinter/vim-indent-guides'
-Bundle 'Rykka/colorv.vim'
 Bundle 'mutewinter/ir_black_mod'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'nanotech/jellybeans.vim'
@@ -56,8 +56,10 @@ if has('win32') || has('win64')
   " Windows has a nasty habit of launching gVim in the wrong working directory
   cd ~
 elseif has('gui_macvim')
-  set guifont=PragmataPro:h14
+  set guifont=Menlo:h13
   set antialias
+  set background=dark
+  colorscheme solarized
   " Hide Toolbar in MacVim
   if has("gui_running")
     set guicursor=n-v-c:block-Cursor-blinkon0
@@ -214,12 +216,3 @@ let g:syntastic_python_checker_args = '--ignore=E501,W806'
 " Snippets
 imap <F2> import pdb;pdb.set_trace()<CR>
 imap <F3> import code; code.interact(local=locals())<CR>
-
-" Vimux bindings
-map <Leader>rp :VimuxPromptCommand<CR>
-" map <Leader>rl :VimuxRunLastCommand<CR>
-map <F5> :wa<CR> <bar> :VimuxRunLastCommand<CR>
-map <Leader>ri :VimuxInspectRunner<CR>
-map <Leader>rx :VimuxClosePanes<CR>
-map <Leader>rq :VimuxCloseRunner<CR>
-map <Leader>rs :VimuxInterruptRunner<CR>
