@@ -292,11 +292,12 @@ let g:ctrlp_use_caching=0
 
 " }}}
 " Syntastic {{{
-let g:syntastic_enable_signs = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_disabled_filetypes = ['html', 'rst']
-let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
-let g:syntastic_python_checker_args = '--ignore=E501,W806'
+" let g:syntastic_enable_signs = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_quiet_warnings = 0
+" let g:syntastic_disabled_filetypes = ['html', 'rst']
+" let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
+let syntastic_python_flake8_args='--ignore=E501'
 
 " }}}
 " Snippets {{{
@@ -337,7 +338,7 @@ let NERDTreeMapJumpFirstChild = 'gK'
 if has('gui_running')
     " GUI Vim
 
-    set guifont=Menlo\ Regular\ for\ Powerline:h12
+    set guifont=Menlo\ Regular:h14
 
     " Remove all the UI cruft
     set go-=T
