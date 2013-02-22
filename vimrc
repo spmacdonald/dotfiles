@@ -264,7 +264,7 @@ augroup ft_vim
 augroup END
 
 " }}}
-
+" Autocommands {{{
 autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -275,8 +275,9 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-
+" }}}
 " Nerd Commenter {{{
+
 let NERDSpaceDelims=1
 
 " }}}
@@ -338,7 +339,7 @@ let NERDTreeMapJumpFirstChild = 'gK'
 if has('gui_running')
     " GUI Vim
 
-    set guifont=Menlo\ Regular:h14
+    set guifont=Menlo\ Regular:h12
 
     " Remove all the UI cruft
     set go-=T
@@ -370,5 +371,17 @@ else
     " Mouse support
     set mouse=a
 endif
+
+function! ToggleBackground()
+    if (&bg=="dark")
+        set background=light
+    else
+        set background=dark
+    endif
+endfunction
+command! Togbg call ToggleBackground()
+nnoremap <F5> :call ToggleBackground()<CR>
+inoremap <F5> <ESC>:call ToggleBackground()<CR>a
+vnoremap <F5> <ESC>:call ToggleBackground()<CR>
 
 " }}}
