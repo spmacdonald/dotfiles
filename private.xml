@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<root>
+    <devicevendordef>
+        <vendorname>KINESIS</vendorname>
+        <vendorid>0x05f3</vendorid>
+    </devicevendordef>
+
+    <deviceproductdef>
+        <productname>KINESIS</productname>
+        <productid>0x0007</productid>
+    </deviceproductdef>
+
+    <item>
+        <name>Volume Keys</name>
+        <identifier>space_cadet.volume</identifier>
+        <autogen>--KeyToConsumer-- KeyCode::F1, ConsumerKeyCode::VOLUME_MUTE</autogen>
+        <autogen>--KeyToConsumer-- KeyCode::F2, ConsumerKeyCode::VOLUME_DOWN</autogen>
+        <autogen>--KeyToConsumer-- KeyCode::F3, ConsumerKeyCode::VOLUME_UP</autogen>
+        <device_only>DeviceVendor::KINESIS, DeviceProduct::KINESIS</device_only>
+    </item>
+
+    <item>
+        <name>Command_L to Control_L</name>
+        <appendix>(+ When you type Command_L only, send Escape)</appendix>
+        <identifier>space_cadet.comandL2controlL_escape</identifier>
+        <autogen>--KeyOverlaidModifier-- KeyCode::COMMAND_L, KeyCode::CONTROL_L, KeyCode::ESCAPE</autogen>
+        <device_only>DeviceVendor::KINESIS, DeviceProduct::KINESIS</device_only>
+    </item>
+
+    <item>
+        <name>Remap forward delete to tab</name>
+        <identifier>space_cadet.left_command_to_tab</identifier>
+        <autogen>--KeyToKey-- KeyCode::FORWARD_DELETE, KeyCode::TAB</autogen>
+        <device_only>DeviceVendor::KINESIS, DeviceProduct::KINESIS</device_only>
+    </item>
+
+    <item>
+        <name>Shift + backspace to forward delete</name>
+        <identifier>space_cadet.shift_backspace_to_forward_delete</identifier>
+        <autogen>--KeyToKey-- KeyCode::DELETE, ModifierFlag::SHIFT_L, KeyCode::FORWARD_DELETE</autogen>
+        <autogen>--KeyToKey-- KeyCode::DELETE, ModifierFlag::SHIFT_R, KeyCode::FORWARD_DELETE</autogen>
+        <device_only>DeviceVendor::KINESIS, DeviceProduct::KINESIS</device_only>
+    </item>
+
+    <appdef>
+        <appname>MACVIM</appname>
+        <equal>org.vim.MacVim</equal>
+    </appdef>
+
+    <item>
+        <name>Right control + homerow to brackets</name>
+        <identifier>space_cadet.brackets</identifier>
+        <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::CONTROL_R, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::CONTROL_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::CONTROL_R, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::CONTROL_R, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::CONTROL_R, KeyCode::BRACKET_LEFT</autogen>
+        <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::CONTROL_R, KeyCode::BRACKET_RIGHT</autogen>
+        <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::CONTROL_R, KeyCode::COMMA, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::CONTROL_R, KeyCode::DOT, ModifierFlag::SHIFT_L</autogen>
+        <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::CONTROL_R, KeyCode::QUOTE</autogen>
+        <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::CONTROL_R, KeyCode::QUOTE, ModifierFlag::SHIFT_L</autogen>
+
+        <device_only>DeviceVendor::KINESIS, DeviceProduct::KINESIS</device_only>
+    </item>
+
+    <item>
+        <name>Use the correct shift keys</name>
+        <identifier>space_cadet.correct_shift_keys</identifier>
+
+        <autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::W, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::E, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::R, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::T, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::A, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::S, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::D, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::F, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::G, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::X, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::C, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::V, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+
+        <autogen>--KeyToKey-- KeyCode::Y, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::U, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::I, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::O, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::P, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::H, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::J, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::K, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::L, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::N, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::M, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::COMMA, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::DOT, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::QUOTE, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+        <device_only>DeviceVendor::KINESIS, DeviceProduct::KINESIS</device_only>
+    </item>
+</root>
