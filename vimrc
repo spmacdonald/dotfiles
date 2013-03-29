@@ -266,6 +266,7 @@ augroup END
 
 " }}}
 " Autocommands {{{
+
 autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -277,6 +278,13 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
 " }}}
 " Nerd Commenter {{{
 
@@ -295,7 +303,7 @@ let g:ctrlp_use_caching=0
 
 " }}}
 " Syntastic {{{
-let g:syntastic_python_checker_args='--ignore=E501'
+let g:syntastic_python_flake8_args='--ignore=E501'
 
 " }}}
 " Snippets {{{
