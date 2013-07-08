@@ -14,7 +14,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
-Bundle 'vim-scripts/python.vim'
 Bundle 'rking/ag.vim'
 
 " }}}
@@ -76,15 +75,6 @@ au FocusLost * :silent! wall
 
 " Resize splits when the window is resized
 au VimResized * :wincmd =
-
-" }}}
-" Trailing whitespace {{{
-" Only shown when not in insert mode so I don't go insane.
-
-augroup trailing
-    au!
-    au InsertEnter * :set listchars-=trail:⌴
-augroup END
 
 " }}}
 " Wildmenu completion {{{
