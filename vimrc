@@ -15,6 +15,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
+Bundle 'sjl/vitality.vim'
 
 " }}}
 " Basic options {{{
