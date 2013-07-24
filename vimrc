@@ -10,12 +10,14 @@ Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-surround'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
+Bundle 'gregsexton/MatchTag'
 
 " }}}
 " Basic options {{{
@@ -112,6 +114,7 @@ set smartindent
 " Backups {{{
 
 set backup                        " enable backups
+set backupcopy=yes
 set noswapfile                    " It's 2012, Vim.
 
 set undodir=~/.vim/tmp/undo//     " undo files

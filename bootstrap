@@ -1,4 +1,5 @@
 #!/bin/sh
 
 ln -s $PWD/vimrc $HOME/.vimrc
+ln -s $PWD/gvimrc $HOME/.gvimrc
 git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
