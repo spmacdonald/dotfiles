@@ -1,0 +1,5 @@
+#!/bin/bash
+
+tarsnap -c -f code/@`date "+%Y-%m-%dT%H:%M:%S"` $HOME/code/
+tarsnap -c -f dotfiles/@`date "+%Y-%m-%dT%H:%M:%S"` $HOME/dotfiles/
+tarsnap -c -f Documents/@`date "+%Y-%m-%dT%H:%M:%S"` $HOME/Documents/
