@@ -11,6 +11,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
@@ -18,6 +19,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
 Bundle 'gregsexton/MatchTag'
+Bundle 'jnwhiteh/vim-golang'
 
 " }}}
 " Basic options {{{
