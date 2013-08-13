@@ -11,7 +11,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-vividchalk'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-dispatch'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
@@ -20,6 +21,7 @@ Bundle 'rking/ag.vim'
 Bundle 'sjl/vitality.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'hynek/vim-python-pep8-indent'
 
 " }}}
 " Basic options {{{
