@@ -14,6 +14,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-dispatch'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'chriskempson/vim-tomorrow-theme'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
@@ -147,6 +148,8 @@ let maplocalleader = "\\"
 syntax on
 set background=dark
 colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_contrast="high"
 
 " }}}
 " Mappings {{{
@@ -251,6 +254,7 @@ let g:syntastic_python_flake8_args='--ignore=E501'
 
 " }}}
 " Snippets {{{
+nnoremap <F6> "=strftime("%FT%T%z")<CR>P
 imap <F4> import pdb;pdb.set_trace()<CR>
 
 " }}}
