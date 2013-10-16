@@ -1,3 +1,6 @@
+colorscheme solarized
+set background=dark
+
 set guifont=Source\ Code\ Pro:h14
 
 " Cursor
