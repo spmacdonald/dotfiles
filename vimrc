@@ -9,6 +9,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion.git'
+Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
@@ -107,7 +108,6 @@ set expandtab
 set wrap
 set textwidth=100
 set formatoptions=qrn1
-" set colorcolumn=+1
 set smarttab
 set smartindent
 
@@ -140,13 +140,7 @@ let mapleader = ","
 let maplocalleader = "\\"
 
 " }}}
-" Color scheme {{{
-syntax on
-
-" }}}
 " Mappings {{{
-
-nnoremap <F6> :set paste!<cr>
 
 " Window Movement
 nmap <silent> <C-h> :wincmd h<CR>
@@ -156,11 +150,6 @@ nmap <silent> <C-l> :wincmd l<CR>
 
 " Toggle highlighting
 nmap <silent> <leader>n :set invhls<CR>:set hls?<CR>
-
-" Underlining
-nmap <silent> <leader>ul :t.\|s/./=/g\|set nohls<cr>
-nmap <silent> <leader>ull :t.\|s/./-/g\|set nohls<cr>
-nmap <silent> <leader>uls :t.\|s/./*/g\|set nohls<cr>
 
 " Mappings
 nmap <silent> <leader>s :set spell!<CR>
