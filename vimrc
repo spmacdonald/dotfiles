@@ -25,6 +25,10 @@ Bundle 'hynek/vim-python-pep8-indent'
 " Basic options {{{
 
 filetype plugin indent on
+syntax enable
+let g:solarized_termtrans = 1
+colorscheme solarized
+set background=dark
 set encoding=utf-8
 set modelines=0
 set autoindent
@@ -42,7 +46,6 @@ set history=1000
 set undofile
 set undoreload=10000
 set mouse=a
-" set list
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
 set shell=/bin/bash\ --login
 set lazyredraw
