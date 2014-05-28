@@ -10,5 +10,5 @@ path=(/usr/local/bin $path)
 
 alias ls="ls -G"
 
-export HOMEBREW_GITHUB_API_TOKEN=f37cf70d007238fffddbd9c64071731d4d80fb61
 export PYTHONDONTWRITEBYTECODE=1
+export VAGRANT_VMWARE_CLONE_DIRECTORY=/Users/scott/vagrant
