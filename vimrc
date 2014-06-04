@@ -13,24 +13,19 @@ Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-dispatch'
-Bundle 'tpope/vim-vividchalk'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'nanotech/jellybeans.vim'
 
 " }}}
 " Basic options {{{
 
 filetype plugin indent on
 syntax enable
-let g:solarized_termtrans = 1
-colorscheme solarized
-set background=dark
+set background=light
 set encoding=utf-8
 set modelines=0
 set autoindent

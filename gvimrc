@@ -1,5 +1,4 @@
-colorscheme solarized
-set background=dark
+set background=light
 
 set guifont=Source\ Code\ Pro:h14
 
