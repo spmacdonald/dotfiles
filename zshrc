@@ -6,7 +6,7 @@ promptinit
 prompt walters
 
 typeset -U path
-path=(/usr/local/bin $path)
+path=(/usr/local/bin /usr/local/git/bin $path)
 
 alias ls="ls -G"
 

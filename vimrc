@@ -4,6 +4,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+let g:sql_type_default = 'pgsql'
+
 " Bundles {{{
 
 Bundle 'gmarik/vundle'
@@ -19,6 +21,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'rking/ag.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'exu/pgsql.vim'
 
 " }}}
 " Basic options {{{
@@ -56,6 +59,7 @@ set autoread
 set shiftround
 set title
 set linebreak
+set clipboard=unnamed
 set dictionary=/usr/share/dict/words
 set spellfile=~/.vim/custom-dictionary.utf-8.add
 
