@@ -11,7 +11,6 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-dispatch'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
@@ -153,22 +152,6 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
-" Buffer Movement
-nnoremap <C-left> :bp<CR>
-nnoremap <C-right> :bn<CR>
-nnoremap <F1> :1b<CR>
-nnoremap <F2> :2b<CR>
-nnoremap <F3> :3b<CR>
-nnoremap <F4> :4b<CR>
-nnoremap <F5> :5b<CR>
-nnoremap <F6> :6b<CR>
-nnoremap <F7> :7b<CR>
-nnoremap <F8> :8b<CR>
-nnoremap <F9> :9b<CR>
-nnoremap <F10> :10b<CR>
-nnoremap <F11> :10b<CR>
-nnoremap <F12> :10b<CR>
-
 " Toggle highlighting
 nmap <silent> <leader>n :set invhls<CR>:set hls?<CR>
 
@@ -178,6 +161,11 @@ nmap <silent> <leader>sv :source $MYVIMRC<CR>
 
 " Toggle [i]nvisible characters
 nnoremap <leader>i :set list!<cr>
+
+" Pytest
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>c <Esc>:Pytest class<CR>
+nmap <silent><Leader>m <Esc>:Pytest method<CR>
 
 " }}}
 " Searching and movement {{{
@@ -254,7 +242,9 @@ let g:sql_type_default = 'pgsql'
 let g:syntastic_python_flake8_args='--ignore=E501'
 
 " }}}
-" Snippets {{{
-imap <F4> import pdb;pdb.set_trace()<CR>
 
-" }}}
+set background=light
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termcolors=16
+colorscheme solarized
