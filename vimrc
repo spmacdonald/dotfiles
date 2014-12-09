@@ -4,8 +4,6 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-let g:sql_type_default = 'pgsql'
-
 " Bundles {{{
 
 Bundle 'gmarik/vundle'
@@ -13,6 +11,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Lokaltog/vim-easymotion.git'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-dispatch'
+Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'altercation/vim-colors-solarized'
@@ -22,6 +22,7 @@ Bundle 'rking/ag.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'exu/pgsql.vim'
+Bundle 'alfredodeza/pytest.vim'
 
 " }}}
 " Basic options {{{
@@ -152,10 +153,25 @@ nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
+" Buffer Movement
+nnoremap <C-left> :bp<CR>
+nnoremap <C-right> :bn<CR>
+nnoremap <F1> :1b<CR>
+nnoremap <F2> :2b<CR>
+nnoremap <F3> :3b<CR>
+nnoremap <F4> :4b<CR>
+nnoremap <F5> :5b<CR>
+nnoremap <F6> :6b<CR>
+nnoremap <F7> :7b<CR>
+nnoremap <F8> :8b<CR>
+nnoremap <F9> :9b<CR>
+nnoremap <F10> :10b<CR>
+nnoremap <F11> :10b<CR>
+nnoremap <F12> :10b<CR>
+
 " Toggle highlighting
 nmap <silent> <leader>n :set invhls<CR>:set hls?<CR>
 
-" Mappings
 nmap <silent> <leader>s :set spell!<CR>
 nmap <silent> <leader>v :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :source $MYVIMRC<CR>
@@ -231,11 +247,10 @@ nmap <Leader>bu :BundleInstall!<CR> " Because this also updates
 nmap <Leader>bc :BundleClean<CR>
 
 " }}}
-" Ctrl-P {{{
-let g:ctrlp_use_caching=0
+" Settings {{{
 
-" }}}
-" Syntastic {{{
+let g:ctrlp_use_caching=0
+let g:sql_type_default = 'pgsql'
 let g:syntastic_python_flake8_args='--ignore=E501'
 
 " }}}
