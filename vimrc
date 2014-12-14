@@ -14,6 +14,7 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-dispatch'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
@@ -21,7 +22,7 @@ Bundle 'rking/ag.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'exu/pgsql.vim'
-Bundle 'alfredodeza/pytest.vim'
+Bundle 'mindriot101/vim-pytest-runner'
 
 " }}}
 " Basic options {{{
@@ -162,10 +163,13 @@ nmap <silent> <leader>sv :source $MYVIMRC<CR>
 " Toggle [i]nvisible characters
 nnoremap <leader>i :set list!<cr>
 
-" Pytest
-nmap <silent><Leader>f <Esc>:Pytest file<CR>
-nmap <silent><Leader>c <Esc>:Pytest class<CR>
-nmap <silent><Leader>m <Esc>:Pytest method<CR>
+nnoremap <leader>b :ls<cr>:b<space>
+
+" pytest-runner.vim mappings
+map <Leader>t :call RunCurrentTestFile()<CR>
+map <Leader>s :call RunNearestTest()<CR>
+map <Leader>l :call RunLastTest()<CR>
+map <Leader>a :call RunAllTests()<CR>
 
 " }}}
 " Searching and movement {{{
@@ -240,6 +244,7 @@ nmap <Leader>bc :BundleClean<CR>
 let g:ctrlp_use_caching=0
 let g:sql_type_default = 'pgsql'
 let g:syntastic_python_flake8_args='--ignore=E501'
+let g:pytest_command = "Dispatch py.test {test}"
 
 " }}}
 
