@@ -6,9 +6,8 @@ promptinit
 prompt walters
 
 typeset -U path
-path=(/usr/local/bin /usr/local/git/bin $path)
+path=(/usr/local/bin /usr/local/git/bin /Applications/Postgres.app/Contents/Versions/latest/bin $path)
 
 alias ls="ls -G"
 
 export PYTHONDONTWRITEBYTECODE=1
-export VAGRANT_VMWARE_CLONE_DIRECTORY=/Users/scott/vagrant

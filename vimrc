@@ -1,4 +1,3 @@
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
@@ -14,15 +13,15 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-dispatch'
+Bundle 'skywind3000/asyncrun.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'morhetz/gruvbox'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
-Bundle 'rking/ag.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'exu/pgsql.vim'
-Bundle '5long/pytest-vim-compiler'
+Bundle 'lifepillar/pgsql.vim'
+Bundle 'scrooloose/nerdtree'
 
 " }}}
 " Basic options {{{
@@ -163,8 +162,6 @@ nmap <silent> <leader>sv :source $MYVIMRC<CR>
 " Toggle [i]nvisible characters
 nnoremap <leader>i :set list!<cr>
 
-nnoremap <F9> :Dispatch<CR>
-
 " }}}
 " Searching and movement {{{
 
@@ -185,6 +182,7 @@ set virtualedit+=block
 " Folding {{{
 
 set foldlevelstart=0
+set foldmethod=marker
 
 " Space to toggle folds.
 nnoremap <Space> za
@@ -240,9 +238,3 @@ let g:sql_type_default = 'pgsql'
 let g:syntastic_python_flake8_args='--ignore=E501'
 
 " }}}
-
-set background=light
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-let g:solarized_termcolors=16
-colorscheme solarized
