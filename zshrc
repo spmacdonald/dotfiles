@@ -1,3 +1,10 @@
+HISTSIZE=50000
+HISTFILE=~/.zsh_history
+SAVEHIST=50000
+setopt    appendhistory
+setopt    sharehistory
+setopt    incappendhistory
+
 autoload -U compinit promptinit
 compinit
 promptinit

@@ -13,15 +13,15 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'skywind3000/asyncrun.vim'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'morhetz/gruvbox'
 Bundle 'scrooloose/syntastic'
 Bundle 'pangloss/vim-javascript'
 Bundle 'gregsexton/MatchTag'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'lifepillar/pgsql.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'lepture/vim-jinja'
+Bundle 'rking/ag.vim'
 
 " }}}
 " Basic options {{{
@@ -181,7 +181,6 @@ set virtualedit+=block
 " }}}
 " Folding {{{
 
-set foldlevelstart=0
 set foldmethod=marker
 
 " Space to toggle folds.
@@ -213,7 +212,9 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype vue.html.javascript.css setlocal ts=2 sts=2 sw=2
 autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype jinja setlocal ts=2 sts=2 sw=2
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
@@ -234,6 +235,7 @@ nmap <Leader>bc :BundleClean<CR>
 " Settings {{{
 
 let g:ctrlp_use_caching=0
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:sql_type_default = 'pgsql'
 let g:syntastic_python_flake8_args='--ignore=E501'
 

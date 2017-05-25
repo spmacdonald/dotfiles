@@ -1,9 +1,6 @@
 colorscheme solarized
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-let g:solarized_termcolors=16
-
-set background=light
+let g:solarized_contrast="high"
+set background=dark
 
 set guifont=Source\ Code\ Pro:h14
 
