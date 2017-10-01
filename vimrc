@@ -1,29 +1,5 @@
-filetype off
+execute pathogen#infect()
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Bundles {{{
-
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion.git'
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/syntastic'
-Bundle 'pangloss/vim-javascript'
-Bundle 'gregsexton/MatchTag'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'lifepillar/pgsql.vim'
-Bundle 'scrooloose/nerdtree'
-Bundle 'lepture/vim-jinja'
-Bundle 'rking/ag.vim'
-
-" }}}
 " Basic options {{{
 
 filetype plugin indent on
@@ -122,9 +98,9 @@ set backup                        " enable backups
 set backupcopy=yes
 set noswapfile                    " It's 2012, Vim.
 
-set undodir=~/.vim/tmp/undo//     " undo files
-set backupdir=~/.vim/tmp/backup// " backups
-set directory=~/.vim/tmp/swap//   " swap files
+set undodir=~/tmp/undo/     " undo files
+set backupdir=~/tmp/backup/ " backups
+set directory=~/tmp/swap/   " swap files
 
 " Make those folders automatically if they don't already exist.
 if !isdirectory(expand(&undodir))
